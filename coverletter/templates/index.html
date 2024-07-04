@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARE3RED - AI Cover Letter Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>CARE3RED</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Cover Letter Generator</a></li>
+                <li><a href="#">Interview Thank You Letter Generator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="generator">
+            <div class="description">
+                <h2>Create A Cover Letter By Pasting 2 Things</h2>
+                <p>Paste your resume and the job post, and get a personalized cover letter.</p>
+                <p>It takes most people less than 47 seconds</p>
+                <ol>
+                    <li>Paste a copy of the job listing</li>
+                    <li>Paste a copy of your resume or LinkedIn</li>
+                    <li>Get a cover letter you can save and use however you want</li>
+                </ol>
+            </div>
+            <div class="form-area">
+                <div class="form-group">
+                    <label for="job-description">Step 1: Paste The Job Post</label>
+                    <textarea id="job-description" placeholder="Paste the job post here..." maxlength="5000"></textarea>
+                    <span class="word-count">0/5000 words</span>
+                    <button id="save-job-description">Save Job Description</button>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Step 2: Paste Your Resume</label>
+                    <textarea id="resume" placeholder="Paste your resume here..." maxlength="5000"></textarea>
+                    <span class="word-count">0/5000 words</span>
+                    <button id="generate-cover-letter">Generate Cover Letter</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="output-area">
+            <h3>Your Generated Cover Letter:</h3>
+            <textarea id="cover-letter" readonly></textarea>
+            <button id="copy-cover-letter">Copy Cover Letter</button>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="#">Cover Letter Generator</a></li>
+            <li><a href="#">Interview Thank You Generator</a></li>
+            <li><a href="#">Cover Letter Examples</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
